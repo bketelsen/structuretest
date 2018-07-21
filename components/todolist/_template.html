@@ -1,0 +1,12 @@
+	<div data-controller="todolist">
+		Name:<input data-target="todolist.name" value="Name..."/>
+		Description:<input data-target="todolist.description" value="Description"/>
+		<button data-action="todolist#add">Add Todo</button>
+		<div data-target="todolist.todos"></div>
+	</div>
+
+	<template id="todo">
+		<h1 data-target="todo.name"></h1>
+		<div data-target="todo.description"></div>
+		<div data-target="todo.done"></div>
+	</template>

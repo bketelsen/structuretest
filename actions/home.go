@@ -7,3 +7,9 @@ import "github.com/gobuffalo/buffalo"
 func HomeHandler(c buffalo.Context) error {
 	return c.Render(200, r.HTML("index.html"))
 }
+
+// HomeHandler is a default handler to serve up
+// a home page.
+func SlideHandler(c buffalo.Context) error {
+	return c.Render(200, r.HTML("slides.html"))
+}

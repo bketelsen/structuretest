@@ -46,9 +46,9 @@ func App() *buffalo.App {
 
 		// Setup and use translations:
 		app.Use(translations())
-
+		app.GET("/public/app.wasm", buffalo.WrapHandlerFunc(wasmHandler))
 		app.GET("/", HomeHandler)
-
+		app.GET("/slides", SlideHandler)
 		app.ServeFiles("/", assetsBox) // serve files from the public directory
 	}
 

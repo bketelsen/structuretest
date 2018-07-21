@@ -1,2 +1,9 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "~font-awesome/css/font-awesome.css";
+.slide {
+  display: none;
+}
+
+.slide.slide--current {
+  display: block;
+}
