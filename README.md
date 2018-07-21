@@ -1,7 +1,3 @@
-# Welcome to Buffalo!
-
-Thank you for choosing Buffalo for your web development needs.
-
 ## Database Setup
 
 It looks like you chose to set up your application using a postgres database! Fantastic!
@@ -17,6 +13,10 @@ Ok, so you've edited the "database.yml" file and started postgres, now Buffalo c
 	$ buffalo db create -a
 
 ## Starting the Application
+
+This application requires that the web assembly be compiled before it can be run.  Compile the wasm with the command:
+
+	$ make wasm
 
 Buffalo ships with a command that will watch your application and automatically rebuild the Go binary and any assets for you. To do that run the "buffalo dev" command:
 
