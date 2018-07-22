@@ -1,10 +1,7 @@
 package slideshow
 
 import (
-	"fmt"
-
 	"github.com/factorapp/structure/core"
-	dom "github.com/gowasm/go-js-dom"
 )
 
 type SlideshowController struct {
@@ -16,6 +13,7 @@ func (s *SlideshowController) currentSlide() int {
 	return s.Index + 1
 }
 
+/*
 func (s *SlideshowController) showSlide() {
 	for i, el := range s.Targets()["slide"] {
 		fmt.Println(el.TagName())
@@ -27,6 +25,8 @@ func (s *SlideshowController) showSlide() {
 	}
 
 }
+*/
+/*
 func (s *SlideshowController) Next(event dom.Event) {
 	el := event.Target()
 	fmt.Println("Target:", el)
@@ -53,3 +53,4 @@ func (s *SlideshowController) Previous(event dom.Event) {
 
 	s.showSlide()
 }
+*/

@@ -10,3 +10,13 @@ server-app:
 .PHONY: run
 run: wasm server-app
 	./server-app
+
+db-up:
+	docker run --name=structuretest_db -d -p 5432:5432 -e POSTGRES_DB=structuretest_development postgres
+	sleep 10
+	buffalo db migrate up
+	docker ps | grep structuretest_db 
+
+db-down:
+	docker stop structuretest_db
+	docker rm structuretest_db
